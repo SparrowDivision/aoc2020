@@ -1,6 +1,6 @@
 def readFile(input_name):
     return [l.strip() for l in open(input_name, 'r').readlines()]
-   
+
 def part1(d):
     sumchar, group = 0, ""
     for x in d:
