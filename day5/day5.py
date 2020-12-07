@@ -8,8 +8,7 @@ def getRowOrCol(rc,mode):
     if mode == "r":
         rc, i, j, lf = rc[:7], 0, 127, "B"
     else:
-        rc, i, j, lf = rc[7:], 0, 7, "R"
-        
+        rc, i, j, lf = rc[7:], 0, 7, "R"        
     for x in rc:
         if x == lf:
             i = (j+(i+1))//2
