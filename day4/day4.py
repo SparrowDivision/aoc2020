@@ -79,8 +79,7 @@ def day2(d):
     counter, passp = 0, ""
     for x in d:
         if x == "" and checkFields(passp):
-            if validFields(matchGroup(passp)):
-                counter += 1
+            if validFields(matchGroup(passp)): counter += 1
             passp = ""
         else: passp += " " + x
     return counter
