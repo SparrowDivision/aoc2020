@@ -1,4 +1,4 @@
-def readFile(input_name):
+def readFile(input_name): 
     with open(input_name, "r") as f:
         adat = list(map(int, f.readlines()))
     return adat
