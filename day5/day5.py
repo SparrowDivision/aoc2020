@@ -1,4 +1,4 @@
-def readFile(input_name):
+def readFile(input_name): 
     return [l.strip() for l in open(input_name, 'r').readlines()]
 
 def getID(r,c):
