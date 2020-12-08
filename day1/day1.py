@@ -1,15 +1,14 @@
 def readFile(input_name): 
     with open(input_name, "r") as f:
-        adat = list(map(int, f.readlines()))
-    return adat
-
-def part1(a):
+        return list(map(int, f.readlines()))
+    
+def day1(a):
     for x in a:
         for y in a:
-            if (int(x) + int(y) == 2020):
+            if (x + y == 2020):
                 return x*y
 
-def part2(a):          
+def day2(a):          
     for x in a:
         for y in a:
             for z in a:
@@ -17,9 +16,9 @@ def part2(a):
                     return x*y*z
     
 def main():
-    adat = readFile("day1.txt")
-    print(part1(adat))
-    print(part2(adat))
+    data = readFile("day1.txt")
+    print(day1(data))
+    print(day2(data))
 
 if __name__ == "__main__":
     main()
