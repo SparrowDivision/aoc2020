@@ -1,9 +1,9 @@
 def readFile(input_name):
-    return [l.strip() for l in open(input_name, 'r').readlines()]
+    return [l.strip() for l in open(input_name, "r").readlines()]
 
-def part1(a):
+def part1(d):
     valid = 0
-    for x in a:
+    for x in d:
         x = x.split(" ")
         minc, maxc = x[0].split("-")
         lf = x[1].strip(":")
@@ -16,9 +16,9 @@ def part1(a):
             valid += 1
     return valid
 
-def part2(a):
+def part2(d):
     valid = 0
-    for x in a:
+    for x in d:
         x = x.split(" ")
         i, j = x[0].split("-")
         lf = x[1].strip(":")
@@ -29,9 +29,9 @@ def part2(a):
     return valid   
 
 def main():
-    adat = readFile("day2.txt")
-    print(part1(adat))
-    print(part2(adat))
+    data = readFile("day2.txt")
+    print(part1(data))
+    print(part2(data))
 
 if __name__ == "__main__":
     main()
