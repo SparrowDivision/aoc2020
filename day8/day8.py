@@ -36,7 +36,7 @@ def part2(d):
         fullrun = part1(s) 
         i += 1
     return fullrun
-        
+
 def main():
     data = readFile("day8.txt")
     print(part1(data)[1])
