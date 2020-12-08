@@ -1,6 +1,6 @@
 def readFile(input_name):
     return [l.strip() for l in open(input_name, "r").readlines()]
-
+                          
 def bagRules(d):
     rules = {}
     for x in d:
@@ -12,7 +12,7 @@ def bagRules(d):
                 count, attr, col, temp = y.split(" ")
                 rules[bag_type] += ([attr + " " + col] * int(count))
     return rules 
-
+      
 def part1(r, lf = "shiny gold"):
     contain = set()
     for bag_type, content in r.items():
