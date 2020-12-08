@@ -1,5 +1,5 @@
 def readFile(input_name):
-    return [l.strip() for l in open(input_name, 'r').readlines()]
+    return [l.strip() for l in open(input_name, "r").readlines()]
 
 def findNum(i):
     value = ""
@@ -29,7 +29,7 @@ def checkPid(pid):
     return False
 
 def checkEcl(col):
-    if col in ("amb", 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth'): return True
+    if col in ("amb", "blu", "brn", "gry", "grn", "hzl", "oth"): return True
     return False
 
 def matchGroup(pp):
@@ -48,13 +48,13 @@ def matchGroup(pp):
 
 def validFields(pp):
     pp_r = {
-    'byr': lambda x: 1920 <= int(x) <= 2002,
-    'iyr': lambda x: 2010 <= int(x) <= 2020,
-    'eyr': lambda x: 2020 <= int(x) <= 2030,
-    'hgt': lambda x: checkHgt(x),
-    'hcl': lambda x: checkHcl(x),
-    'ecl': lambda x: checkEcl(x),
-    'pid': lambda x: checkPid(x)
+    "byr": lambda x: 1920 <= int(x) <= 2002,
+    "iyr": lambda x: 2010 <= int(x) <= 2020,
+    "eyr": lambda x: 2020 <= int(x) <= 2030,
+    "hgt": lambda x: checkHgt(x),
+    "hcl": lambda x: checkHcl(x),
+    "ecl": lambda x: checkEcl(x),
+    "pid": lambda x: checkPid(x)
     }
     for field, rule in pp_r.items():
         if not rule(pp[field]): return False        
