@@ -66,7 +66,7 @@ def checkFields(pp):
         if field not in pp: return False
     return True
 
-def day1(d):
+def part1(d):
     counter, passp = 0, ""
     for x in d:
         if x == "" and checkFields(passp):
@@ -75,7 +75,7 @@ def day1(d):
         else: passp += x
     return counter
 
-def day2(d):
+def part2(d):
     counter, passp = 0, ""
     for x in d:
         if x == "" and checkFields(passp):
@@ -86,8 +86,8 @@ def day2(d):
 
 def main():
     data = readFile("day4.txt")
-    print(day1(data))
-    print(day2(data))
+    print(part1(data))
+    print(part2(data))
 
 if __name__ == "__main__":
     main()
