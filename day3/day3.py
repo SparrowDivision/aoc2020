@@ -1,7 +1,7 @@
 def readFile(input_name): 
-    return [l.strip() for l in open(input_name, 'r').readlines()]
+    return [l.strip() for l in open(input_name, "r").readlines()]
 
-def day1(d):
+def part1(d):
     x, y, tree_count = 0, 0, 0
     while x + 1 < len(d):
         x += 1
@@ -10,7 +10,7 @@ def day1(d):
         if check_point == "#": tree_count += 1
     return tree_count
 
-def day2(d):
+def part2(d):
     slope = [(1,1),(3,1),(5,1),(7,1),(1,2)]
     multip = 1
     for s in slope:
@@ -25,8 +25,8 @@ def day2(d):
 
 def main():
     data = readFile("day3.txt")
-    print(day1(data))
-    print(day2(data))
+    print(part1(data))
+    print(part2(data))
 
 if __name__ == "__main__":
     main()
