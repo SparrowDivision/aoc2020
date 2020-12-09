@@ -1,6 +1,6 @@
 def readFile(input_name):
     return [int(l) for l in open(input_name, "r").readlines()]
-
+ 
 def checkPreamble(pr, x):
     for i in range(len(pr)):
         for j in range(len(pr)):
