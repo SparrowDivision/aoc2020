@@ -1,6 +1,6 @@
 def readFile(input_name):
     return [int(l) for l in open(input_name, "r").readlines()]
-
+ 
 def addDevice(d):
     d.append(max(d)+3)
     d.sort()
