@@ -2,7 +2,7 @@ def readFile(input_name):
     return [int(l) for l in open(input_name, "r").readlines()]
 
 def addDevice(d):
-    d.append(max(d)+3)
+    d.append(max(d) + 3)
     d.sort()
     return d
 
@@ -12,7 +12,7 @@ def part1(d):
         if x - prev == 1: j1 += 1
         if x - prev == 3: j3 += 1
         prev = x
-    return j1*j3
+    return j1 * j3
 
 def part2(d):
     ways = {0:1}
