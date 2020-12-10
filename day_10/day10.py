@@ -21,7 +21,7 @@ def part2(d):
         if x - 1 in ways: ways[x] += ways[x-1]
         if x - 2 in ways: ways[x] += ways[x-2]
         if x - 3 in ways: ways[x] += ways[x-3]
-    return ways[max(d)]
+    return ways[x]
 
 def main():
     data = addDevice(readFile("day10.txt"))
