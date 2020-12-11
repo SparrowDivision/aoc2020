@@ -1,4 +1,4 @@
-def readFile(input_name): 
+def readFile(input_name):
     return [l.strip() for l in open(input_name, "r").readlines()]
 
 def part1(d):
@@ -11,7 +11,7 @@ def part1(d):
     return tree_count
 
 def part2(d):
-    slope = [(1,1),(3,1),(5,1),(7,1),(1,2)]
+    slope = [(1,1), (3,1), (5,1), (7,1), (1,2)]
     multip = 1
     for s in slope:
         x, y, tree_count = 0, 0, 0
@@ -30,4 +30,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
