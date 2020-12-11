@@ -24,8 +24,7 @@ def checkHcl(col):
     return True
 
 def checkPid(pid):
-    if len(pid) == 9 and pid.isdigit():
-        return True
+    if len(pid) == 9 and pid.isdigit(): return True
     return False
 
 def checkEcl(col):
@@ -43,7 +42,7 @@ def matchGroup(pp):
         elif x == " ":
             fields[tmp1] = tmp2
             tmp2 = ""
-        else: tmp2 += x   
+        else: tmp2 += x
     return fields
 
 def validFields(pp):
@@ -57,7 +56,7 @@ def validFields(pp):
     "pid": lambda x: checkPid(x)
     }
     for field, rule in pp_r.items():
-        if not rule(pp[field]): return False        
+        if not rule(pp[field]): return False  
     return True
 
 def checkFields(pp):
