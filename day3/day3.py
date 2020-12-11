@@ -19,7 +19,7 @@ def part2(d):
             x += s[1]
             y += s[0]
             check_point = d[x][y % len(d[x])]
-            if check_point == "#'": tree_count += 1
+            if check_point == "#": tree_count += 1
         multip *= tree_count
     return multip
 
