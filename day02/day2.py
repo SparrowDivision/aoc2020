@@ -26,7 +26,7 @@ def part2(d):
         i, j = int(i) - 1, int(j) - 1
         if ((pw[i] == lf or pw[j] == lf) and not (pw[i] == lf and pw[j] == lf)):
             valid += 1
-    return valid   
+    return valid
 
 def main():
     data = readFile("day2.txt")
