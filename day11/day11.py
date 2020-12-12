@@ -1,4 +1,4 @@
-def readFile(input_name): 
+def readFile(input_name):
     return [l.strip() for l in open(input_name, "r").readlines()]
 
 def shouldChange(limit, seat, adj):
@@ -12,7 +12,7 @@ def part1(d):
     prev = ["*" * rlength] * 2
     for x in d:
         prev.insert(-1, "*" + x + "*")
-    
+
     change = True
     while change:
         actuall, occupied = ["*" * rlength] * 2, 0
@@ -40,7 +40,7 @@ def part2(d):
     prev = ["*" * rlength] * 2
     for x in d:
         prev.insert(-1, "*" + x + "*")
-    
+
     change = True
     while change:
         actuall, occupied = ["*" * rlength] * 2, 0
