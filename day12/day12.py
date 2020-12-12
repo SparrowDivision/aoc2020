@@ -9,7 +9,7 @@ def newDirection(old, act, angle):
 def sinCos(x, mode, e = 2.718281828459045):
     if mode == "sin":
         return (e ** (x * 1j)).imag
-    return (e ** (x  1j)).real
+    return (e ** (x * 1j)).real
 
 def rotateWaypoint(actx, acty, angle, pi = 3.14159265359):
     angle = angle * pi / 180
