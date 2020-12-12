@@ -24,7 +24,7 @@ def part1(d):
         if action == "F": coords[direction] += value
         elif not action in coords: direction = newDirection(direction, action, value)
         else: coords[action] += value
-    return abs(coords["N"]-coords["S"]) + abs(coords["E"]-coords["W"])
+    return abs(coords["N"] - coords["S"]) + abs(coords["E"] - coords["W"])
 
 def part2(d):
     coords, waypoint = {"x": 0, "y": 0}, {"x": 10, "y": 1}
