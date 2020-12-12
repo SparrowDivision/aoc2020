@@ -1,5 +1,5 @@
-def readFile(input_name): 
-    return [l.strip() for l in open(input_name, 'r').readlines()]
+def readFile(input_name):
+    return [l.strip() for l in open(input_name, "r").readlines()]
 
 def part1(d):
     sumchar, group = 0, ""
@@ -8,25 +8,22 @@ def part1(d):
             sumchar += len(set(group))
             group = ""
         else:
-            group = group + x
-    return sumchar                 
+            group += x
+    return sumchar    
 
 def part2(d):
     group_size, sumyes, group = 0, 0, ""
-    for x in d: 
+    for x in d:
         if x == "":
             for y in set(group):
                 occurrence = 0
                 for z in (group):
-                    if y == z:
-                        occurrence += 1
-                if occurrence == group_size:
-                    sumyes += 1
-            group_size = 0
-            group = ""
+                    if y == z: occurrence += 1
+                if occurrence == group_size: sumyes += 1
+            group_size, group = 0, ""
         else:
             group_size += 1
-            group = group + x
+            group += x
     return sumyes
 
 def main():
