@@ -1,4 +1,4 @@
-def readFile(input_name):
+def readFile(input_name): 
     return [int(l) for l in open(input_name, "r").readlines()]
 
 def addDevice(d):
