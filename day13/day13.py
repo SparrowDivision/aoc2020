@@ -1,4 +1,4 @@
-def readFile(input_name): 
+def readFile(input_name):
     l = open(input_name, "r").readlines()
     return int(l[0]), [int(x) if x.isdigit() else x for x in l[1].split(",")]
 
