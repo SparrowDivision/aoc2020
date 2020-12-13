@@ -1,7 +1,7 @@
-def readFile(input_name):
+def readFile(input_name): 
     l = open(input_name, "r").readlines()
     return int(l[0]), [int(x) if x.isdigit() else x for x in l[1].split(",")]
-
+ 
 def part1(target_time, buses):
     buses.discard("x")
     current_time, busID = target_time - 1, 0
