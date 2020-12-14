@@ -1,11 +1,13 @@
-def readFile(input_name, output = []):
-    for line in open(input_name, "r").readlines():
+def readFile(input_name):
+    output = []
+    for line in open(input_name, "r").readlines():  
         x, y = line.strip().split(" = ")
         if y.isdigit(): x, y = int(x[4:-1]), f'{int(y):036b}'
         output.append((x, y))
     return output
 
-def part1(d, memory = {}):
+def part1(d):
+    memory = {}
     for address, value in d:
         if address == "mask": mask = value
         else:
@@ -14,7 +16,7 @@ def part1(d, memory = {}):
                 if m.isdigit(): masked += m
                 else: masked += v
             memory[address] = int(masked,2)
-    return sum(memory.values())
+    return sum(memory.values())      
 
 def part2(d):
     pass
