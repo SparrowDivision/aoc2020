@@ -1,5 +1,5 @@
 def readFile(input_name, output = []):
-    for line in open(input_name, "r").readlines():  
+    for line in open(input_name, "r").readlines():
         x, y = line.strip().split(" = ")
         if y.isdigit(): x, y = int(x[4:-1]), "{0:036b}".format(int(y))
         output.append((x, y))
@@ -13,7 +13,7 @@ def maskValue(mask, value, mode, masked = ""):
 def getVariations(m):
     xcount = m.count("X")
     length = "{0:0" + str(xcount) + "b}"
-    return [(length.format(i))for i in range(2 ** xcount)]
+    return [(length.format(i)) for i in range(2 ** xcount)]
 
 def part1(d):
     memory = {}
