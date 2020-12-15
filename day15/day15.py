@@ -1,4 +1,4 @@
-def readFile(input_name): 
+def readFile(input_name):
     return {int(x): [i+1] for i, x in enumerate(open(input_name, "r").readline().split(","))}
 
 def day15(t):
