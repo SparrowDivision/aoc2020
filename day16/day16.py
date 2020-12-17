@@ -1,4 +1,4 @@
-def readFile(input_name): 
+def readFile(input_name):
     lines = [l.strip().split(":") for l in open(input_name, "r").readlines()]
     blank1, blank2 = findBlank(lines)
     return ({field: getRule(rule) for field, rule in lines[:blank1]},
